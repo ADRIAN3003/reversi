@@ -9,6 +9,10 @@ namespace reversi
     class Program
     {
         static Tabla tabla;
+
+        const string FORDITAS = "F;4;1;0;1";
+        const string LEPES = "K;1;3";
+
         static void Main(string[] args)
         {
             NegyedikFeladat();
@@ -22,8 +26,9 @@ namespace reversi
 
         private static void KilencedikFeladat()
         {
-            Console.Write("\n9. feladat: [jatekos;sor;oszlop] = ");
-            string[] bekeres = Console.ReadLine().Split(';');
+            Console.Write("\n9. feladat: [jatekos;sor;oszlop] = " + LEPES + "\n");
+            //string[] bekeres = Console.ReadLine().Split(';');
+            string[] bekeres = LEPES.Split(';');
             if (tabla.Lepes(
                     Convert.ToChar(bekeres[0]),
                     Convert.ToInt32(bekeres[1]),
@@ -39,8 +44,9 @@ namespace reversi
 
         private static void NyolcadikFeladat()
         {
-            Console.Write("\n8. feladat: [jatekos;sor;oszlop;iranySor;iranyOszlop] = ");
-            string[] bekeres = Console.ReadLine().Split(';');
+            Console.Write("\n8. feladat: [jatekos;sor;oszlop;iranySor;iranyOszlop] = " + FORDITAS + "\n");
+            //string[] bekeres = Console.ReadLine().Split(';');
+            string[] bekeres = FORDITAS.Split(';');
             if (tabla.VanForditas(
                     Convert.ToChar(bekeres[0]),
                     Convert.ToInt32(bekeres[1]),
