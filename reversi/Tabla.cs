@@ -106,7 +106,7 @@ namespace reversi
             {
                 for (int oszlopSzam = -1; oszlopSzam < 2; oszlopSzam++)
                 {
-                    if (sorSzam != 0 && oszlop != 0)
+                    if (sorSzam != 0 && oszlopSzam != 0)
                     {
                         if (VanForditas(jatekos, sor, oszlop, sorSzam, oszlopSzam))
                         {
